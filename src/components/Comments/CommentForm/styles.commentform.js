@@ -1,5 +1,6 @@
-import styled from "styled-components";
-import * as styles from "../../shared/styles.guide";
+import styled, { css } from "styled-components";
+import * as styles from "../../shared-styles/styles.guide";
+import * as animations from "../../shared-styles/styles.animation";
 
 export const StyledContainer = styled.div`
   width: 100%;
@@ -30,43 +31,6 @@ export const StyledForm = styled.form`
   width: 100%;
   margin: 2rem 0 0 0;
 
-  input {
-    width: 90%;
-    font-size: ${styles.font_size.t1};
-    padding: 0.5rem 0.25rem;
-    border: 2px solid ${styles.color.extralightgray};
-    outline: 0;
-    margin-bottom: 1rem;
-    color: ${styles.color.superdarkgray};
-
-    ::placeholder {
-      font-weight: ${styles.font_weight.lighter};
-    }
-
-    :focus {
-      border-bottom: 2px solid ${styles.color.inv_theme};
-    }
-  }
-
-  textarea {
-    width: 90%;
-    height: 3rem;
-    padding: 0.5rem 0.25rem;
-    border: 2px solid ${styles.color.extralightgray};
-    font-size: ${styles.font_size.t3};
-    color: ${styles.color.superdarkgray};
-    outline: 0;
-    resize: none;
-
-    ::placeholder {
-      font-weight: ${styles.font_weight.lighter};
-    }
-
-    :focus {
-      border-bottom: 2px solid ${styles.color.inv_theme};
-    }
-  }
-
   button {
     background-color: ${styles.color.inv_theme};
     color: white;
@@ -88,5 +52,59 @@ export const StyledForm = styled.form`
       box-shadow: 0px 0px 1px 1px ${styles.color.darkgray};
       font-weight: ${styles.font_weight.medium};
     }
+
+    :disabled {
+      cursor: not-allowed;
+    }
+  }
+`;
+
+const placeholderStyles = css`
+  font-weight: ${props =>
+    (props.err && styles.font_weight.light) || styles.font_weight.lighter};
+  color: ${props => props.err && styles.color.inv_theme};
+`;
+
+export const StyledInput = styled.input`
+  width: 90%;
+  font-size: ${styles.font_size.t1};
+  padding: 0.5rem 0.25rem;
+  border: 2px solid ${styles.color.extralightgray};
+  outline: 0;
+  margin-bottom: 1rem;
+  color: ${styles.color.superdarkgray};
+  border-bottom: ${props => props.err && `2px solid ${styles.color.inv_theme}`};
+
+  ${props => props.err && animations.shake}
+
+  ::placeholder {
+    ${placeholderStyles}
+  }
+
+  :focus {
+    border-bottom: 2px solid ${styles.color.inv_theme};
+  }
+`;
+
+export const StyledTextArea = styled.textarea`
+  width: 90%;
+  height: 5rem;
+  padding: 0.5rem 0.25rem;
+  border: 2px solid ${styles.color.extralightgray};
+  font-size: ${styles.font_size.t1};
+  font-weight: ${styles.font_weight.light};
+  color: ${styles.color.superdarkgray};
+  outline: 0;
+  resize: none;
+  border-bottom: ${props => props.err && `2px solid ${styles.color.inv_theme}`};
+
+  ${props => props.err && animations.shake}
+
+  ::placeholder {
+    ${placeholderStyles}
+  }
+
+  :focus {
+    border-bottom: 2px solid ${styles.color.inv_theme};
   }
 `;

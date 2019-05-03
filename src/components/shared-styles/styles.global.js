@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle, css } from "styled-components";
 import * as styles from "./styles.guide";
 
 export default createGlobalStyle`
@@ -7,7 +7,10 @@ export default createGlobalStyle`
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    color: ${styles.color.superdarkgray}
+    color: ${styles.color.superdarkgray};
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box; 
   }
 
   button, a {
@@ -15,11 +18,15 @@ export default createGlobalStyle`
   }
 `;
 
-export const StyledContainer = styled.section`
+export const flexCenter = css`
   display: flex;
-  flex-direction: ${props => props.column && `column`};
   justify-content: center;
   align-items: center;
+`;
+
+export const StyledContainer = styled.section`
+  ${flexCenter}
+  flex-direction: ${props => props.column && `column`};
   width: 30rem;
 
   padding: 2rem;
@@ -29,7 +36,5 @@ export const StyledContainer = styled.section`
 `;
 
 export const StyledApp = styled.main`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  ${flexCenter}
 `;

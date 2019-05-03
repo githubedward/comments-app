@@ -1,22 +1,34 @@
 import React from "react";
-import { StyledCommentBlock, StyledCommentList } from "./styles.commentlist";
+import PropTypes from "prop-types";
+import { StyledCommentList } from "./styles.commentlist";
+import CommentBlock from "./CommentBlock";
 
-// When component becomes large, CommentBlock could be moved to a separate file
-const CommentBlock = ({ comment }) => (
-  <StyledCommentBlock id={comment.id}>
-    <h2>{comment.name}</h2>
-    <h4>{comment.body}</h4>
-  </StyledCommentBlock>
-);
-
-const CommentList = ({ comments }) => (
+const CommentList = props => (
   <StyledCommentList>
-    {comments
-      .sort((a, b) => b.id - a.id)
-      .map(comment => (
-        <CommentBlock key={comment.id} comment={comment} />
-      ))}
+    {props.comments &&
+      props.comments
+        .sort((a, b) => b.id - a.id)
+        .map(comment => (
+          <CommentBlock
+            key={comment.id}
+            comment={comment}
+            _deleteComment={props._deleteComment}
+            {...props}
+          />
+        ))}
   </StyledCommentList>
 );
+
+CommentList.propTypes = {
+  props: PropTypes.shape({
+    comments: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number,
+        name: PropTypes.string,
+        comment: PropTypes.string
+      })
+    ).isRequired
+  })
+};
 
 export default CommentList;
