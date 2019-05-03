@@ -10,8 +10,7 @@ Clone this repo to your local machine using `git clone` https://github.com/githu
 
 ### Setup
 
-After cloning the repo, `$ cd comments-app` to go the project directory
-
+After cloning the repo, `$ cd comments-app` to go the project directory.
 In the project directory, you can run:
 
 #### `npm install`
