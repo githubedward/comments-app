@@ -1,6 +1,7 @@
 # Comment Application - Coding Challenge
 
-> A simple app that displays all comments retrieve from a server, add a comment, and deletes a comment
+> A simple app that displays all comments retrieved from a server. User can also add a comment and deletes a comment.
+> See the demo - https://comments-mini-app.netlify.com/
 
 ### Clone
 
