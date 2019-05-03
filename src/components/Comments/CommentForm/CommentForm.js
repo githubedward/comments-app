@@ -20,11 +20,12 @@ const CommentForm = ({ _addComment, _toggleConfirmWindow }) => (
     </header>
     <Formik
       initialValues={{ name: "", comment: "" }}
-      onSubmit={values => {
+      onSubmit={(values, formikBag) => {
         _addComment({
           name: values.name,
           body: values.comment
         });
+        formikBag.resetForm();
       }}
       validationSchema={validationSchema}
       render={({

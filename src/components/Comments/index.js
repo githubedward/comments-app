@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import CommentForm from "./CommentForm/CommentForm";
 import CommentList from "./CommentList/CommentList";
 import { StyledContainer } from "../shared-styles/styles.global";
+import Loader from "../shared-icons/Loader";
 import api from "../../services/comments.services";
 
 export default class CommentContainer extends Component {
@@ -56,12 +57,14 @@ export default class CommentContainer extends Component {
           _addComment={this._addComment}
           _toggleConfirmWindow={this._toggleConfirmWindow}
         />
-        <CommentList
-          comments={this.state.comments}
-          confirmWindow={this.state.confirmWindow}
-          _deleteComment={this._deleteComment}
-          _toggleConfirmWindow={this._toggleConfirmWindow}
-        />
+        {(this.state.comments.length === 0 && <Loader loading={true} />) || (
+          <CommentList
+            comments={this.state.comments}
+            confirmWindow={this.state.confirmWindow}
+            _deleteComment={this._deleteComment}
+            _toggleConfirmWindow={this._toggleConfirmWindow}
+          />
+        )}
       </StyledContainer>
     );
   }

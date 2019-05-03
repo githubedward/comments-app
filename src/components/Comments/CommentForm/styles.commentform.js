@@ -68,6 +68,7 @@ const placeholderStyles = css`
 export const StyledInput = styled.input`
   width: 90%;
   font-size: ${styles.font_size.t1};
+  font-weight: ${styles.font_weight.light};
   padding: 0.5rem 0.25rem;
   border: 2px solid ${styles.color.extralightgray};
   outline: 0;

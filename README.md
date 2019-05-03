@@ -1,11 +1,14 @@
 # Comment Application - Coding Challenge
 
+> A simple app that displays all comments retrieve from a server, add a comment, and deletes a comment
+
 ### Clone
 
 Clone this repo to your local machine using `git clone` https://github.com/githubedward/comments-app.git
 
 ### Setup
 
+After cloning the repo, `$ cd comments-app` to go the project directory
 In the project directory, you can run:
 
 #### `npm install`
@@ -20,12 +23,10 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-### Tech
+### Tech Used
 
 - React
 - Formik (forms)
 - Yup (validation)
 - Styled-Components (CSS in JS)
 - Axios (http request)
-
-### Features
