@@ -31,3 +31,6 @@ You will also see any lint errors in the console.
 - Yup (validation)
 - Styled-Components (CSS in JS)
 - Axios (http request)
+
+### Screenies
+![comments](https://user-images.githubusercontent.com/41134618/57120057-919d9600-6d3c-11e9-96f4-f1a1d8d04134.gif)
