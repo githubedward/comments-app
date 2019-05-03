@@ -19,6 +19,7 @@ export const StyledContainer = styled.div`
     h1 {
       margin: 1.5rem;
       font-weight: ${styles.font_weight.medium};
+      color: white;
     }
   }
 `;
@@ -35,7 +36,7 @@ export const StyledForm = styled.form`
     background-color: ${styles.color.inv_theme};
     color: white;
     border: none;
-    margin: 1.5rem 0;
+    margin: 2.5rem 0;
     border-radius: 3px;
     padding: 0.5rem 2rem;
     font-size: ${styles.font_size.t1};
@@ -72,7 +73,7 @@ export const StyledInput = styled.input`
   padding: 0.5rem 0.25rem;
   border: 2px solid ${styles.color.extralightgray};
   outline: 0;
-  margin-bottom: 1rem;
+  margin: 0rem 0 1rem 0;
   color: ${styles.color.superdarkgray};
   border-bottom: ${props => props.err && `2px solid ${styles.color.inv_theme}`};
 

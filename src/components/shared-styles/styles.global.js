@@ -3,7 +3,6 @@ import * as styles from "./styles.guide";
 
 export default createGlobalStyle`
   body {
-    @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500');
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
@@ -27,7 +26,7 @@ export const flexCenter = css`
 export const StyledContainer = styled.section`
   ${flexCenter}
   flex-direction: ${props => props.column && `column`};
-  width: 30rem;
+  width: 35rem;
 
   padding: 2rem;
   margin: 1rem;
