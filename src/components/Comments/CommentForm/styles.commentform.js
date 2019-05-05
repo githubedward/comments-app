@@ -61,6 +61,7 @@ export const StyledForm = styled.form`
 `;
 
 const placeholderStyles = css`
+  font-family: "Roboto", sans-serif;
   font-weight: ${props =>
     (props.err && styles.font_weight.light) || styles.font_weight.lighter};
   color: ${props => props.err && styles.color.inv_theme};

@@ -38,12 +38,13 @@ export const StyledCommentBlock = styled.li`
 
   button {
     ${flexCenter}
-    background-color: none;
-    border: none;
     outline: none;
     padding: 0px;
     margin: 0px;
     width: 2.5rem;
+
+    background-color: white;
+    border: none;
 
     svg {
       display: none;
@@ -104,6 +105,8 @@ export const StyledConfirmDelete = styled.div`
     ${flexCenter}
     button {
       color: ${styles.color.darkgray};
+      background-color: white;
+      border: none;
 
       :hover {
         text-decoration: underline;
