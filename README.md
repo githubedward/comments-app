@@ -1,6 +1,7 @@
 # Comment Application - Coding Challenge
 
-> A simple app that displays all comments retrieved from a server. User can also add a comment and deletes a comment.
+> A simple app that displays all comments retrieved from a server. Users can also add a comment and delete a comment.
+
 > See the demo - https://comments-mini-app.netlify.com/
 
 ### Clone
@@ -9,7 +10,7 @@ Clone this repo to your local machine using `git clone` https://github.com/githu
 
 ### Setup
 
-After cloning the repo, `$ cd comments-app` to go the project directory
+After cloning the repo, `$ cd comments-app` to go the project directory.
 In the project directory, you can run:
 
 #### `npm install`
@@ -33,4 +34,5 @@ You will also see any lint errors in the console.
 - Axios (http request)
 
 ### Screenies
-![comments](https://user-images.githubusercontent.com/41134618/57120057-919d9600-6d3c-11e9-96f4-f1a1d8d04134.gif)
+![comments](https://user-images.githubusercontent.com/41134618/57120295-7764b780-6d3e-11e9-8e4b-6b93f13e2ae4.gif)
+
